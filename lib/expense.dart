@@ -1,13 +1,14 @@
 // TODO Implement this library.
-
 class Expense {
-  final String title;
   final double amount;
-  final DateTime date; // optionnel
+  final String title;
+  final DateTime date;
+  final String category; // nouvelle propriété
 
   Expense({
-    required this.title,
     required this.amount,
-    DateTime? date,
-  }) : this.date = date ?? DateTime.now();
+    required this.title,
+    required this.date,
+    this.category = 'Autre', // valeur par défaut
+  });
 }
