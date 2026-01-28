@@ -29,11 +29,11 @@ jobs:
     # 4️⃣ Build APK debug
     - name: Build APK Debug
       run: flutter build apk --debug
-
+      
     # 5️⃣ Upload APK
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-       name: app-release.apk
-       path: build/app/outputs/flutter-apk/app-release.apk
+       name: app-release
+       path: build/app/outputs/flutter-apk/*.apk
 
